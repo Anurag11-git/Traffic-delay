@@ -12,8 +12,8 @@ CORS(app, origins=["http://localhost:5173"], supports_credentials=True)
 model = joblib.load("backend/model.pkl")
 weather_encoder = joblib.load("backend/weather_encoder.pkl")
 
-ORS_API_KEY="eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjVlMjczMjdhYjE0NTRhYWFiNGU0YzM5MjJjN2FjNTE3IiwiaCI6Im11cm11cjY0In0="
-WEATHER_API_KEY = "be74796d21c84bf5abc74400231806"
+ORS_API_KEY="APIKEY1"
+WEATHER_API_KEY = "APIKEY2"
 
 def geocode_location(place_name):
     url = "https://api.openrouteservice.org/geocode/search"
@@ -119,4 +119,5 @@ def predict():
     })
 
 if __name__ == "__main__":
+
     app.run(debug=True)
